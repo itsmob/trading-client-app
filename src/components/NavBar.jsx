@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 
 import { useAuth } from '../providers/AuthUser';
 
+import ButtonLink from '../components/ButtonLink';
+
 export default function NavBar() {
   const { isAuth, logout } = useAuth();
 
@@ -17,7 +19,13 @@ export default function NavBar() {
                 </h3>
               </Link>
             </div>
-            <div>{isAuth && <button onClick={logout}>Logout</button>}</div>
+            <div>
+              {isAuth && (
+                <ButtonLink padding={2} onClick={logout}>
+                  Logout
+                </ButtonLink>
+              )}
+            </div>
           </div>
         </div>
       </nav>
