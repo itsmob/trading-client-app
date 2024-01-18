@@ -18,7 +18,7 @@ export default function Register() {
 
   return (
     <>
-      <main className='Register'>
+      <main className='Register pt-16 min-h-screen'>
         <section>
           <h1>Sign up</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
